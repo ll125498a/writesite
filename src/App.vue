@@ -2,9 +2,8 @@
     <div id="app">
         <el-container>
             <el-main>
-                <contents></contents>
+                <router-view></router-view>
             </el-main>
-            <el-footer></el-footer>
         </el-container>
     </div>
 </template>
