@@ -2,8 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Contents from '@/components/Contents'
 import CarWrite from '../components/CarWrite'
-import Shopping from '../components/Shopping'
-import Evaluation from '../components/Evaluation'
 
 Vue.use(Router)
 const originalPush = Router.prototype.push
@@ -18,17 +16,7 @@ export default new Router({
         },
         {
             path: '/Car-Write',
-            component: CarWrite,
-            children: [
-                {
-                    path: 'Shopping',
-                    component: Shopping
-                },
-                {
-                    path: 'Evaluation',
-                    component: Evaluation
-                }
-            ]
+            component: CarWrite
         }
     ]
 })

@@ -19,10 +19,10 @@ export default {}
     margin: 0;
 }
 .el-carousel__item:nth-child(2n) {
-    background-color: aqua;
+    background-color: #333333;
 }
 
 .el-carousel__item:nth-child(2n + 1) {
-    background-color: aqua;
+    background-color: #333333;
 }
 </style>

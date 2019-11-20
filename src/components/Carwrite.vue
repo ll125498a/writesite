@@ -1,48 +1,32 @@
 <template>
-    <div class="banner">
-        <div class="inner">
-            <el-button type="primary" plain round @click="Shopping()"
-                >导购按钮</el-button
-            >
-            <el-button type="primary" plain round @click="Evaluation()"
-                >评测按钮</el-button
-            >
-            <router-view></router-view>
+    <div id="create-draft">
+        <div class="draft-box">
+            <draftside></draftside>
+            <draftmid></draftmid>
         </div>
     </div>
 </template>
 <script>
 export default {
-    methods: {
-        Shopping() {
-            this.$router.push({ path: '/Car-Write/Shopping' })
-        },
-        Evaluation() {
-            this.$router.push({ path: '/Car-Write/Evaluation' })
+    data() {
+        return {
+            textarea2: ''
         }
+    },
+    methods: {},
+    components: {
+        draftside,
+        draftmid
     }
 }
+import draftside from './DraftSide'
+import draftmid from './DraftMid'
 </script>
 <style>
-.el-button--primary.is-plain {
-    width: 280px;
-    height: 120px;
-    font-size: 18px;
-    font-weight: bolder;
-    color: #fff;
-    background-color: #5eaeff;
-    border-color: #409eff;
-    margin-top: 30px;
-}
-.el-button--primary.is-plain:hover {
-    color: #fff;
-    background-color: #5eaeff;
-    border-color: #409eff;
-    box-shadow: 0px 0px 10px 1px #565656;
-}
-.el-button--primary.is-plain:focus {
-    color: black;
-    background-color: #fff;
-    border-color: 2px solid #ffffff;
+.el-input--suffix .el-input__inner {
+    height: 36px;
+    width: 390px;
+    border-radius: 20px;
+    margin-top: 10px;
 }
 </style>

@@ -1,10 +1,6 @@
 <template>
     <div id="app">
-        <el-container>
-            <el-main>
-                <router-view></router-view>
-            </el-main>
-        </el-container>
+        <router-view></router-view>
     </div>
 </template>
 
